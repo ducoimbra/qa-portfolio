@@ -52,6 +52,12 @@ Bugs reais documentados com:
 - Mozilla Firefox
 - Testes mobile quando aplicável
 
+   Ferramentas Utilizadas
+  - Google Docs
+  - Google Sheets
+  - Bandicam
+  - Spinning Tolls
+  - 
   Evolução contínua
 
 - Ampliação da cobertura de cenários positivos e negativos
@@ -59,6 +65,5 @@ Bugs reais documentados com:
 - Análise mais aprofundada de severidade e impacto dos bugs
 - Consolidação da prática em testes manuais e exploratórios
 - Preparação contínua para processos seletivos de QA Júnior
-
 
 Qualidade não é fase, é Cultura !
