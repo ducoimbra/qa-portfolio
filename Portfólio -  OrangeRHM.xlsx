@@ -7,7 +7,29 @@ Username: Admin
 
 Password: admin123
 
+Este projeto contempla a execução de testes manuais funcionais no sistema OrangeHRM (versão demo), um software web voltado à gestão de recursos humanos.
 
-Orange HRM é um Software de Gestão de Recursos Humanos, de código aberto e altamente flexível, que ajuda empresas de todos os tamanhos a otimizar e automatizar seus processos de RH, desde o básico (cadastro de funcionários, controle de ponto) até funcionalidades mais avançadas como gestão de desempenho, recrutamento e benefícios.
+Durante os testes, foram validados fluxos essenciais do usuário, com foco em:
 
-Para mim foi um grande desafio pois estava mais habituado em apenas testar sites menos estruturados, mesmo sendo um grande desafio consegui desenvolver muito o meu olhar análitico e visão como um QA que realmente preza pela qualidade. 
+Autenticação (Login e Logout)
+
+Validação de campos obrigatórios
+
+Comportamento do sistema diante de entradas válidas e inválidas
+
+Funcionalidades do módulo Buzz (postagens e exclusão de conteúdo)
+
+Os casos de teste foram documentados de forma clara e objetiva, considerando:
+
+Pré-condições
+
+Passos reproduzíveis
+
+Resultado esperado
+
+Resultado obtido
+
+Objetivo do projeto:
+Aprimorar habilidades em criação de casos de teste bem estruturados, leitura de requisitos implícitos e validação de fluxos comuns em sistemas corporativos, alinhados à atuação como QA Júnior.
+
+Qualidade não é fase, é cultura.
