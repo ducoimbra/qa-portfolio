@@ -1,15 +1,28 @@
 Estoque Manager (Demo) URL: https://estoquemanage.com.br/
 Tipo: Sistema Web (Gestão de Estoque)
 
-Nesse projeto de um desenvolvedor autonomo, tive a oportunidade de realizar o meu aprendizado em Bug's  Reports bem estruturado, claro e objetivo com a Qualidade.
+Este repositório contém registros de Bug Reports elaborados durante testes manuais realizados em um sistema web de gestão de estoque, com foco em qualidade, clareza e padronização de documentação.
 
-Fiquei muito satisfeito com esse projeto devido que antes dele não tinha nenhum Bug Report profissional. 
-Em outros sites eram bem estruturados e consistentes com os testes explorátorios feitos por mim manualmente e com isso não encontrava inconsistencias.
+Os testes foram conduzidos de forma exploratória e funcional, com atenção especial aos fluxos críticos do usuário, principalmente o processo de cadastro e autenticação (Login), onde foram identificadas múltiplas inconsistências de comportamento.
 
-Nesse projeto foi onde achei diversos bugs no inicio do caminho principal do usuário que é o Login que teve diversos bugs.
+Os bugs encontrados foram documentados seguindo boas práticas de mercado, incluindo:
 
-E tive a oportunidade de comunicar diretamente com o dono do projeto que ficou muito interessado e feliz pelo meu interesse de estudos no seu sistema.
+Descrição clara do problema
 
-Foi reportado a este mesmo documento, e ele está analisando para resolver da melhor forma possivel 
+Passos para reprodução
 
-Qualidade não é fase, é Cultura!
+Resultado esperado vs. resultado encontrado
+
+Severidade
+
+Evidências (prints e vídeos)
+
+Ambientes testados
+
+Durante o processo, houve também comunicação direta com o responsável pelo desenvolvimento do sistema, reforçando a importância da qualidade desde as etapas iniciais do produto.
+
+Objetivo do projeto:
+Demonstrar habilidades práticas em testes manuais, identificação de bugs reais e documentação profissional, voltadas para atuação como QA Júnior.
+
+“Qualidade não é fase, é cultura.”
+
