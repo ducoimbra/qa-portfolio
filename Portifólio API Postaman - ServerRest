@@ -1,6 +1,6 @@
 Projeto focado na validação de regras de negócio, contratos e tratamento de erros de uma API REST de gerenciamento de usuários.
 
--- bjetivo
+-- Objetivo
 Garantir a qualidade e a segurança dos fluxos de cadastro e autenticação, validando desde o formato das respostas até a persistência correta dos dados.
 
 -- Ferramentas & Tecnologias
