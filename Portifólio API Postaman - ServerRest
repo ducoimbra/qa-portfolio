@@ -1,53 +1,23 @@
-- Projeto
+Projeto focado na validação de regras de negócio, contratos e tratamento de erros de uma API REST de gerenciamento de usuários.
 
-Teste de API – Gestão de Usuários
+-- bjetivo
+Garantir a qualidade e a segurança dos fluxos de cadastro e autenticação, validando desde o formato das respostas até a persistência correta dos dados.
 
-- Objetivo
+-- Ferramentas & Tecnologias
+* **Postman** (Automação/Execução)
+* **JSON/HTTP** (Formato e Protocolo)
+* **GitHub** (Versionamento)
 
-Validar regras de negócio, contratos de API e tratamento de erros de uma API REST responsável pelo cadastro, autenticação e gerenciamento de usuários.
+-- Escopo de Testes
+- [x] Cadastro de usuário (Sucesso e Exceções)
+- [x] Autenticação (Login e Bearer Token)
+- [x] Validação de campos obrigatórios e duplicados
+- [x] Verificação de Status Codes e Mensagens de Erro
 
-- API utilizada
+--  Organização do Projeto
+* `/test-cases`: Documentação detalhada dos cenários.
+* `/bug-reports`: Relatórios de falhas encontradas.
+* `/postman`: Collection e Environment para importação.
 
-  Exemplo:
-
-Base URL: https://serverest.dev
-
-Tipo: API REST
-
-Autenticação: Bearer Token
-
-Formato de resposta: JSON
-
-- Escopo de Testes
-
-Cadastro de usuário
-
-Login
-
-Autorização
-
-Validação de campos obrigatórios
-
-Validação de dados duplicados
-
-Status Codes
-
-Mensagens de erro
-
-- Ferramentas
-
-Postman
-
-GitHub
-
-JSON
-
-HTTP
-
-- Documentação
-
-Casos de Teste: /test-cases
-
-Bug Reports: /bug-reports
-
-Collection Postman: /postman
+---
+**API Utilizada:** [ServeRest](https://serverest.dev)
