@@ -1,0 +1,53 @@
+- Projeto
+
+Teste de API – Gestão de Usuários
+
+- Objetivo
+
+Validar regras de negócio, contratos de API e tratamento de erros de uma API REST responsável pelo cadastro, autenticação e gerenciamento de usuários.
+
+- API utilizada
+
+  Exemplo:
+
+Base URL: https://serverest.dev
+
+Tipo: API REST
+
+Autenticação: Bearer Token
+
+Formato de resposta: JSON
+
+- Escopo de Testes
+
+Cadastro de usuário
+
+Login
+
+Autorização
+
+Validação de campos obrigatórios
+
+Validação de dados duplicados
+
+Status Codes
+
+Mensagens de erro
+
+- Ferramentas
+
+Postman
+
+GitHub
+
+JSON
+
+HTTP
+
+- Documentação
+
+Casos de Teste: /test-cases
+
+Bug Reports: /bug-reports
+
+Collection Postman: /postman
