@@ -1,0 +1,580 @@
+{
+  "info": {
+    "_postman_id": "798228b5-c238-49ad-8463-0981767be191",
+    "name": "Server Rest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51036404",
+    "_collection_link": "https://go.postman.co/collection/51036404-798228b5-c238-49ad-8463-0981767be191?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"teste.brayan@email.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/login",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login com Usuario Não Autenticado",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"emailfantasia@gmail.com\",\r\n  \"password\": \"senhafantasia\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/login",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login com Credencias em Branco",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/login",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "Pesquisa de Produtos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/produtos",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cadastrar Produtos",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlLmJyYXlhbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTc2ODgyNDM1NSwiZXhwIjoxNzY4ODI0OTU1fQ.yiegYfhkFPbT9Qml6P5i9UDdQOTtJ88GHdUN_DPHot4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Teclado Coimbra High Tech\",\r\n  \"preco\": 1500,\r\n  \"descricao\": \"Headset\",\r\n  \"quantidade\": 10\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/produtos",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cadastrar Produtos com Credencias em Branco",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyYXlhbi50ZXN0ZUBlbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTc2ODQ4Mzk1NCwiZXhwIjoxNzY4NDg0NTU0fQ.JyxmS3shyOOSS1YwH7YG2T9gU4WH4N_261kJKYI9tfQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"\",\r\n  \"preco\": \"\",\r\n  \"descricao\": \"\",\r\n  \"quantidade\": 0\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/produtos",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pesquisa de Produtos Por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/produtos/0fWXB8RR8YYy14xR",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "produtos",
+                "0fWXB8RR8YYy14xR"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pesquisa de Produtos Por ID inválido",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/produtos/PjSVlsdI7q29HqbM",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "produtos",
+                "PjSVlsdI7q29HqbM"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edição de Produtos Por ID em Branco Copy",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \" \",\r\n  \"preco\": \"1\",\r\n  \"descricao\": \" \",\r\n  \"quantidade\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/produtos/PjSVlsdI7q29HqbM",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "produtos",
+                "PjSVlsdI7q29HqbM"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuario",
+      "item": [
+        {
+          "name": "Pesquisa de Usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/usuarios",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pesquisa de Usuarios por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/usuarios/0uxuPY0cbmQhpEz1",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios",
+                "0uxuPY0cbmQhpEz1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pesquisa de Usuarios Por ID Inválido",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/usuarios/0uxuPY0cbmQhpx25",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios",
+                "0uxuPY0cbmQhpx25"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cadastro Usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Brayan Coimbra\",\r\n  \"email\": \"brayan.teste@email.com\",\r\n  \"password\": \"123456\",\r\n  \"administrador\": \"true\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/usuarios",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cadastro Usuario com Email Duplicado",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Coimbra Brayan\",\r\n  \"email\": \"brayan.teste@email.com\",\r\n  \"password\": \"123456\",\r\n  \"administrador\": \"true\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/usuarios",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edição de Usuarios",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \"Coimbra Brayan\",\r\n  \"email\": \"teste.brayan@email.com\",\r\n  \"password\": \"123456\",\r\n  \"administrador\": \"true\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/usuarios/0uxuPY0cbmQhpEz1",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios",
+                "0uxuPY0cbmQhpEz1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edição de Usuarios Em Branco",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nome\": \" \",\r\n  \"email\": \" \",\r\n  \"password\": \" \",\r\n  \"administrador\": \" \"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/usuarios",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "usuarios"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Carrinhos",
+      "item": [
+        {
+          "name": "Cadastrar Carrinho",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"GCTa1kxFQbmsnVUG\",\r\n      \"quantidade\": 1\r\n    },\r\n    {\r\n      \"idProduto\": \"D5BeQtLLPMSQl73z\",\r\n      \"quantidade\": 3\r\n    },\r\n     {\r\n      \"idProduto\": \"N1LcsvAVlTdh1VlE\",\r\n      \"quantidade\": 3\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/carrinhos",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "carrinhos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Carrinhos Cadastrados",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/carrinhos",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "carrinhos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Carrinho Excluido",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{Server_URL}}/carrinhos/qbMqntef4iTOwWfg",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "carrinhos",
+                "qbMqntef4iTOwWfg"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Carrinho por ID Copy",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/carrinhos/concluir-compra",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "carrinhos",
+                "concluir-compra"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retornar Produtos Para o Estoque",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{Server_URL}}/carrinhos/cancelar-compra",
+              "host": [
+                "{{Server_URL}}"
+              ],
+              "path": [
+                "carrinhos",
+                "cancelar-compra"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlLmJyYXlhbkBlbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTc2ODgyNDM1NSwiZXhwIjoxNzY4ODI0OTU1fQ.yiegYfhkFPbT9Qml6P5i9UDdQOTtJ88GHdUN_DPHot4",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Server_URL",
+      "value": ""
+    }
+  ]
+}
