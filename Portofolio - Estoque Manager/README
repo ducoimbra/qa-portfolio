@@ -1,0 +1,53 @@
+  Descrição do Projeto
+
+Projeto de testes manuais aplicado a um sistema web de gerenciamento de estoque, com foco na validação de operações essenciais como cadastro,
+edição, consulta e controle de dados.
+Este projeto simula um cenário comum encontrado em sistemas corporativos.
+.
+.
+.
+  Objetivo
+
+Garantir a integridade das funcionalidades de estoque
+Validar regras de negócio relacionadas a produtos e quantidades
+Exercitar pensamento crítico e analítico como QA
+.
+.
+.
+
+  Escopo dos Testes
+
+Cadastro de produtos
+Edição de produtos
+Pesquisa e visualização de dados
+Validação de campos obrigatórios
+Cenários negativos (dados inválidos, campos em branco)
+Estratégia de Testes
+Testes manuais funcionais
+Criação de cenários baseados em risco
+Validação de comportamento esperado vs comportamento real
+Atenção a impactos no negócio (estoque incorreto, dados inconsistentes)
+.
+.
+.
+
+  Artefatos Produzidos
+
+Casos de Teste documentados
+Evidências de execução
+Validações de regras de negócio
+.
+.
+.
+
+ Ferramentas Utilizadas
+
+Navegador Web
+Google Sheets / Excel
+Documentação manual de testes
+.
+.
+.
+ Conclusão
+
+Projeto desenvolvido com foco em organização, clareza e pensamento QA, simulando atividades comuns de um QA Júnior em ambiente corporativo.
