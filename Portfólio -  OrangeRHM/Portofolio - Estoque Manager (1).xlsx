@@ -1,0 +1,28 @@
+Estoque Manager (Demo) URL: https://estoquemanage.com.br/
+Tipo: Sistema Web (Gestão de Estoque)
+
+Este repositório contém registros de Bug Reports elaborados durante testes manuais realizados em um sistema web de gestão de estoque, com foco em qualidade, clareza e padronização de documentação.
+
+Os testes foram conduzidos de forma exploratória e funcional, com atenção especial aos fluxos críticos do usuário, principalmente o processo de cadastro e autenticação (Login), onde foram identificadas múltiplas inconsistências de comportamento.
+
+Os bugs encontrados foram documentados seguindo boas práticas de mercado, incluindo:
+
+Descrição clara do problema
+
+Passos para reprodução
+
+Resultado esperado vs. resultado encontrado
+
+Severidade
+
+Evidências (prints e vídeos)
+
+Ambientes testados
+
+Durante o processo, houve também comunicação direta com o responsável pelo desenvolvimento do sistema, reforçando a importância da qualidade desde as etapas iniciais do produto.
+
+Objetivo do projeto:
+Demonstrar habilidades práticas em testes manuais, identificação de bugs reais e documentação profissional, voltadas para atuação como QA Júnior.
+
+“Qualidade não é fase, é cultura.”
+
