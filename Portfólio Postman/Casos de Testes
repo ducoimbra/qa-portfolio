@@ -1,0 +1,158 @@
+	
+CT - API - 01	
+Titulo: Cadastro de usuário com dados válidos
+Objetivo: Validar se API Retorna corretamente Status 201 Created, cadastrando corretamente o usuario no sistema, exibindo ID unico.
+Endpoint: /usuarios
+Método: POST
+Regra de Negócio: 
+O sistema deve permitir o cadastro de usuários únicos,
+O e-mail deve ser único no banco de dados,
+Todos os campos obrigatórios devem ser informados.
+
+PréCondicões:
+A API deve estar disponível,
+Não deve existir usuário cadastrado com o e-mail informado.
+Dados de Entrada:
+(Request)	
+"{
+  ""nome"": ""Coimbra Brayan"",
+  ""email"": ""brayan.teste@email.com"",
+  ""password"": ""123456""
+  ""administrador"" : ""true""
+}"
+
+Validações Realizadas: 
+Status Code 200 (Created),
+Mensagem exibindo que o cadastrado foi criado com sucesso,
+Contrato da resposta respeitado corretamente,
+Resultado Encontrado: API retornou corretamente Status Code 200 (Created), 
+Usuario criado com sucesso, ID retornado corretamente.
+Ambiente de Teste:	Postman/ Windows 10
+Status: Passou
+
+CT - API - 02	
+Titulo: Login do usuário com dados válidos
+Objetivo: Validar se a API autentica um usuário com credenciais válidas, retornando um token de autenticação conforme o contrato definido, sem expor dados sensíveis.
+Endpoint: /login
+Método: POST
+PréCondicões: API Disponivel, Usuário previamente cadastrado no sistema.
+Regra de Negócio: 
+O usuário só deve acessar o sistema se as credenciais forem válidas, 
+A API deve retornar um token único de autenticação,
+Dados sensíveis não devem ser expostos na resposta,
+Status Code 200 (OK) deve ser respeitado corretamente conforme o contrato.
+Dados de Entrada: 
+(Request)	
+"{
+  ""email"": ""brayan.teste@email.com"",
+  ""password"": ""123456""
+}"
+Validações Realizadas:	
+Retornar Status Code 200 (OK),
+Retornar um body em formato JSON,
+O body deve conter o campo token,
+O token deve ser do tipo string,
+A resposta não deve conter senha,
+Token deve ser único por sessão.
+Resultado Encontrado: 
+"Status Code 200 (OK) exibido com sucesso,
+API Realizou o Login corretamente,
+Token exibido corretamente com validade de 10 minutos.
+Ambiente de Teste:	Postman / Windows 10
+Status: Passou
+
+CT - API - 03	
+Titulo: Login com Credencias Inválidas
+Objetivo: Validar se a API impede o acesso do usuario quando informado credencias inválidas.
+Endpoint: /login
+Método: POST
+PréCondicões: 
+A API deve está disponivel,
+Usuario já cadastrado.
+Regra de Negócio	O usuario só pode acessar com credencias válidas,
+API Deve rejeitar o acesso com os dados incorretos,
+Dados precisam estar alinhandos conforme o cadastro.
+
+Dados de Entrada:
+(Request)	
+"{
+  ""email"": ""brayan.teste@email.com"",
+  ""password"": ""654321""
+}"
+Validações Realizadas:
+Status Code 401 (Unauthorized),
+Mensagem de erro exibindo ""Usuario/Senha inválidos ou Incorretos,
+Contrato da resposta respeitado corretamente.
+Resultado Encontrado: API Retornou Status Code 401 (Unauthorized) com sucesso,
+API não permitiu o login,
+Login bloqueado com sucesso.
+Ambiente de Teste: Postman / Windows 10
+Status: Passou
+
+CT - API - 04	
+Titulo: Cadastro com email  existente - Cenário Negativo
+Objetivo: Validar se a API impede o cadastro do usuario com email já existente.
+Endpoint: /usuarios
+Método: POST
+PréCondicões: 
+API Disponivel,
+Usuario já cadastrado,
+Regra de Negócio	API Deve impedir qualquer cadastro de email já cadastrado no banco de dados.
+Dados de Entrada: 
+(Request)	
+"{
+  ""nome"": ""Coimbra Brayan"",
+  ""email"": ""brayan.teste@email.com"",
+  ""password"": ""123456""
+  ""administrador"" : ""true""
+}"
+Validações Realizadas: 
+Status Code 400 (Bad Request),
+Mensagem informando que o e-mail já está em uso,
+Nenhum novo usuário criado,
+Contrato da resposta respeitado,
+Resultado Encontrado:	API bloqueou corretamente o cadastro com e-mail duplicado.
+Ambiente de Teste: Postman / Windows 10
+Status: Passou
+
+CT - API - 05	
+Titulo: Pesquisa por Usuario com ID Invalido - Cenário Negativo
+Objetivo: Validar se a API a reconhece que o ID não cadastrado Inválido.
+Endpoint: /usuarios
+Método: GET
+PréCondicões: API deve está Disponivel ID Inválido.
+Regra de Negócio: O sistema deve reconhecer ID Inválido e impedir a busca do ID.
+Dados de Entrada: 
+(Request)	ID Utilizado : 0uxuPY0cbmQhpx25
+Validações Realizadas	"API deve retornar Status 400 (Bad Request), 
+Mensagem informando ""usuario não cadastrado"",
+Contrato da resposta respeitado.
+Resultado Encontrado:	
+Status Code 400 exibido corretamente,
+Mensagem de erro exibida com sucesso.
+Ambiente de Teste:	Postman / Windows 10
+Status: Passou
+
+CT - API - 06	
+Titulo: Editar Cadastrado de Usuario com os Campos em Branco - Cenário Negativo
+Objetivo: Validar se API não conclui a edição do usuario com campos em branco.
+Endpoint: /usuarios
+Método: PUT
+PréCondicões: Usuario já cadastrado API deve esta disponivel,
+Regra de Negócio	"Não deve conter espaços em brancos na edição ,
+Sistema não deve prosseguir com a edição em branco.
+Dados de Entrada:
+(Request)	
+"{
+  ""nome"": "" "",
+  ""email"": "" "",
+  ""password"": "" "",
+  ""administrador"": "" ""
+}"
+Validações Realizadas:	
+Status Code 400 (Bad Request) ,
+Deve exibir mensagem de erro informando que é necessario email válido e administrador ""true"" ou false"",
+Contrato da resposta respeitado,
+Resultado Encontrado: Status Code 400 exibido corretamente, Mensagem de erro exibida com sucesso informando que é necessario os dados corretos.
+Ambiente de Teste: Postman / Windows 10
+Status: Passou
