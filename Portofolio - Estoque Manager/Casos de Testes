@@ -1,0 +1,53 @@
+Bug - ID 01	
+Titulo: Falha no cadastro de usuário com dados válidos
+Tela: Cadastro / Registro
+Tipo de Problema:	Funcional
+Severidade:	Alta
+Pré-condição:	Usuário não cadastrado no sistema
+Passo-a-Passo:  
+Acesse o site Estoque Manager
+Insira credencias válidas no campo ""Nome Completo"" 
+Insira credencias válidas ""Email"" o email valido
+Insira credencias válidas ""Senha"" o senha válida
+Clique em Cadastrar
+
+Resultado esperado:	Sistema confirma criação do usuario com sucesso, retornando o usuario a página de login
+Resultado Encontrado:	Sistema não cadastra o usuario corretamente exibindo uma mensagem de erro "Erro ao cadastrar. Tente novamente."
+Ambiente de Teste:	Chrome / Edge / Firefox / Windows 10
+
+Observações:Após múltiplas tentativas, o sistema informa que o usuário já existe, indicando possível persistência no backend mesmo após retorno de erro no frontend.
+
+Bug - ID 02		
+Titulo: Sistema permite varios cliques no botão de "Cadastrar" e exibe mensagem inconsistentes	
+Tela:	Cadastro / Registro	
+Tipo de Problema:	Funcional / Validação / UX	
+Severidade:	Alta	
+Pré-condição:Usuário não cadastrado no sistema	
+Passo-a-Passo
+Acesse o site Estoque Manager
+Insira no campo ""Nome Completo"" um nome valido
+Insira no campo ""Email"" o email valido
+Insira no campo ""Senha"" o senha válida
+Clique repetidamente no botão “Cadastrar” antes do retorno da requisição"	
+
+Resultado esperado:	Sistema confirma criação do usuario com sucesso, retornando o usuario a página de login	
+Resultado Encontrado:	Sistema não cadastra o usuário e quando é clicado várias vezes no botão de "Cadastrar", exibe uma mensagem de "Este email já está em uso"	
+Ambiente de Teste	Chrome: / Edge / Firefox / Windows 10	
+
+Bug - ID 03	
+	
+Titulo:  Sistema exibe "Login Realizado com Sucesso", porém não concede acesso ao sistema
+Tela:	Login
+Tipo de Problema:	Funcional / Autenticação
+Severidade:	Critica
+Pré-condição:	Usuario já cadastrado no sistema
+Passo-a-Passo	
+"Acesse o site Estoque Manager
+Insira no campo ""Email"" o email válido
+Insira no campo ""Senha"" o senha válida
+Garantir que os campos estejam preenchidos com credenciais válidas previamente cadastradas
+Clique em ""Entrar""
+
+Resultado esperado:	Sistema concede acesso ao usuario, e redireciona usuario a página inicial, exibindo wigdtes e informações , com mensagem de confirmação "Login realizado com sucesso"
+Resultado Encontrado:	Sistema não redireciona o usuario ao sistema, mesmo exibindo uma mensagem de "Login realizado com sucesso"
+Ambiente de Teste	Chrome: / Edge / Firefox / Windows 10
