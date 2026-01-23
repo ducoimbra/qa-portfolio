@@ -132,6 +132,7 @@ Status Code 400 exibido corretamente,
 Mensagem de erro exibida com sucesso.
 Ambiente de Teste:	Postman / Windows 10
 Status: Passou
+Observações: A API retorna 400 para IDs inexistentes, porém uma abordagem mais aderente ao padrão REST seria 404 Not Found
 
 CT - API - 06	
 Titulo: Editar Cadastrado de Usuario com os Campos em Branco - Cenário Negativo
