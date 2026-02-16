@@ -80,8 +80,9 @@ Usuário não autenticado no sistema
 Passo-a-Passo	"Acessar o site Estoque Manager
 Inserir no campo email credencias validas no  campo ""email"" 
 Inserir no campo senha credencias validas no campo ""senha"" 
-Clique no botão ""Entrar""
+Clique no botão ""Entrar"" 
 
 Resultado esperado: Sistema autentica o usuario e concede acesso ao menu principal do sistema
 Resultado Encontrado: O acesso ao sistema ocorre somente após a criação de uma nova conta, mesmo quando o usuário já possui credenciais válidas
 Ambiente de Teste: Chrome / Edge / Firefox / Windows 10
+
