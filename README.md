@@ -74,7 +74,7 @@ Meu objetivo é crescer com consistência para, no médio prazo, atuar como QA P
   Contato
 
 Email: brayancoimbrapinto@gmail.com
-LinkedIn: (adicione aqui)
+LinkedIn: https://www.linkedin.com/in/brayan-coimbra-b0358720a/
 
    Nota Final
 
