@@ -1,0 +1,25 @@
+ Automação de Testes E2E com Cypress
+
+ Descrição do Projeto
+Este projeto demonstra a execução de testes automatizados E2E com Cypress em aplicação web real (WebDojo - PapitoQA), simulando cenários próximos da realidade do mercado.
+
+O foco está na validação de fluxos críticos de autenticação,
+comportamento do sistema frente a dados inválidos e boas práticas
+de automação com JavaScript.
+
+ Objetivo
+- Automatizar fluxos críticos da aplicação
+- Validar comportamento do sistema com dados válidos e inválidos
+- Evoluir o portfólio de QA com automação prática e real
+- Aplicar boas práticas com Cypress e JavaScript
+
+ Testes Implementados
+- [x] Deve logar com sucesso
+- [x] Não deve logar com senha inválida
+- [x] Não deve logar com email inválido
+
+Tecnologias Utilizadas
+- Cypress
+- JavaScript
+- Git & GitHub
+
