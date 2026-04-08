@@ -23,4 +23,4 @@ npx cypress open
 
 Testes Implementados
 - Login válido
-- Login in
+- Login inválido
