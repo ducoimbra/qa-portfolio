@@ -37,8 +37,6 @@ describe('Login', () => {
     cy.get('#email').type('404@webdojo.com')
     cy.get('#password').type('katana123')
 
-    cy.contains('button', 'Entrar').click()
-
     cy.contains('Acesso negado! Tente novamente.')
       .should('be.visible')
   })
