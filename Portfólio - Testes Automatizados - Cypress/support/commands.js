@@ -24,12 +24,12 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('iniciar', ()=> {
+Cypress.Commands.add('start', ()=> {
     cy.viewport(1440, 900)
     cy.visit('http://localhost:3000/')
 })
 
-Cypress.Commands.add('submeterLogin', (email, senha)=> {
+Cypress.Commands.add('submitLoginForm', (email, senha)=> {
     cy.viewport(1440, 900)
     cy.visit('http://localhost:3000/')
 
